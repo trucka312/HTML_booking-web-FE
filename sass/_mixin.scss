@@ -1,0 +1,563 @@
+@mixin fa5($icon) {
+  content: $icon;
+  font-family: "Font Awesome 5 Pro";
+}
+@mixin box($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+@mixin font-size($font-size, $line-height: normal, $letter-spacing: normal) {
+  font-size: $font-size * 1rem;
+
+  @if $line-height!=normal {
+    line-height: $line-height * 1rem;
+  }
+
+  @if $letter-spacing!=normal {
+    letter-spacing: $letter-spacing * 1px;
+  }
+}
+@mixin font($font-size, $line-height: normal, $font-weight: normal) {
+  font-size: $font-size * 1rem;
+
+  @if $line-height!=normal {
+    line-height: $line-height * 1rem;
+  }
+
+  @if $font-weight!=normal {
+    font-weight: $font-weight;
+  }
+}
+@mixin keyframes($name) {
+  @-webkit-keyframes #{$name} {
+    @content;
+  }
+
+  @-moz-keyframes #{$name} {
+    @content;
+  }
+
+  @keyframes #{$name} {
+    @content;
+  }
+}
+
+@mixin owl($leftright) {
+  &.owl-carousel {
+    .owl-nav button.owl-prev {
+      background: transparent;
+      border: 0;
+      left: $leftright;
+      transition: all 0.5s;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      @include media-breakpoint-down(md) {
+        left: 0rem;
+      }
+    }
+    .owl-nav button.owl-next {
+      background: transparent;
+      border: 0;
+      right: $leftright;
+      transition: all 0.5s;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      @include media-breakpoint-down(md) {
+        right: 0rem;
+      }
+    }
+    .owl-nav button.owl-prev,
+    .owl-nav button.owl-next {
+      &:hover {
+        background-color: transparent;
+        color: #333;
+      }
+      i {
+        background: #fafafa;
+        border: 1px solid #ccc;
+        width: 3rem;
+        height: 3rem;
+        font-size: 1.5rem;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+      }
+    }
+  }
+}
+@mixin font-face($font-name, $path, $weight: normal, $style: normal) {
+  @font-face {
+    font-family: quote($font-name);
+    src: url($path + ".eot");
+    src: url($path + ".eot?#iefix") format("embedded-opentype"),
+      url($path + ".woff") format("woff"),
+      url($path + ".ttf") format("truetype"),
+      url($path + ".svg##{$font-name}") format("svg");
+    font-weight: $weight;
+    font-style: $style;
+  }
+}
+@mixin img-cover($height) {
+  &.image-cover {
+    position: relative;
+    height: auto;
+    margin: 0 auto;
+    overflow: hidden;
+    padding-top: $height;
+    img {
+      right: 0;
+      width: 100%;
+      height: 100%;
+      bottom: 0;
+      left: 0;
+      top: 0;
+      position: absolute;
+      -o-object-position: 50% 50%;
+      object-position: 50% 50%;
+      -o-object-fit: cover;
+      object-fit: cover;
+      font-family: "object-fit: cover;";
+    }
+  }
+}
+@mixin box-product($height) {
+  .box-product {
+    background: #fff;
+    border-radius: 1rem;
+    position: relative;
+    padding: 1rem;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    @include media-breakpoint-down(sm) {
+      padding: 0.5rem;
+    }
+    &:hover {
+      box-shadow: 0px 3px 6px #00000029;
+    }
+    & .image-cover {
+      position: relative;
+      height: auto;
+      margin: 0 auto;
+      overflow: hidden;
+      padding-top: $height;
+      cursor: pointer;
+      img {
+        right: 0;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        top: 0;
+        position: absolute;
+        -o-object-position: 50% 50%;
+        object-position: 50% 50%;
+        -o-object-fit: cover;
+        object-fit: cover;
+        font-family: "object-fit: cover;";
+      }
+    }
+    &__image:hover + .box-product-tooltip {
+      top: 0;
+    }
+    &-sale-off {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      background: $secondary-color;
+      color: #fff;
+      position: absolute;
+      top: 1.5rem;
+      left: 1.5rem;
+      padding: 0.5rem;
+      border-radius: 2px;
+      z-index: 2;
+      &__number {
+        @include font-size(1.6, 2.2);
+
+        @include media-breakpoint-down(sm) {
+          @include font-size(1.2, 1.7);
+        }
+      }
+      &__text {
+        @include font-size(1.2, 1.7);
+        @include media-breakpoint-down(sm) {
+          @include font-size(0.8, 1.1);
+        }
+      }
+      @include media-breakpoint-down(sm) {
+        top: 0.5rem;
+        left: 0.5rem;
+      }
+    }
+    &__name {
+      a {
+        @include font-size(1.6, 2.2);
+        padding: 1rem 0;
+        color: $black;
+        display: block;
+        @include media-breakpoint-down(xl) {
+          @include font-size(1.4, 1.9);
+        }
+      }
+    }
+    &-price {
+      display: flex;
+      align-items: flex-end;
+      gap: 1rem;
+      @include media-breakpoint-down(sm) {
+        gap: 0.6rem;
+        flex-wrap: wrap;
+      }
+      &__current {
+        @include font-size(2.4, 3.3);
+        font-weight: 600;
+        color: $secondary-color;
+        @include media-breakpoint-down(xl) {
+          @include font-size(1.6, 2.6);
+        }
+      }
+      &__old {
+        @include font-size(1.4, 1.9);
+        color: $color-text;
+        @include media-breakpoint-down(xl) {
+          @include font-size(1.2, 1.7);
+        }
+      }
+    }
+    &-color {
+      display: flex;
+      align-items: center;
+      flex-wrap: nowrap;
+      margin-top: 1rem;
+      gap: 0.5rem;
+      &__item {
+        @include box(1.6rem);
+        border: 1px solid $black;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        cursor: pointer;
+        &.is-select {
+          @include box(2.2rem);
+          &::before {
+            content: "";
+            @include box(100%);
+            background: transparent;
+            border-radius: 50%;
+            border: 3px solid #fff;
+          }
+        }
+      }
+      &__item--black {
+        background-color: $black;
+      }
+      &__item--brown {
+        background-color: $brown;
+      }
+      &__item--blue {
+        background-color: #89d2b3;
+      }
+      &__item--red {
+        background-color: $secondary-color;
+      }
+      &__item--white {
+        background-color: $white;
+      }
+      &__item--yellow {
+        background-color: $yellow;
+      }
+      &__item--green {
+        background-color: $green;
+      }
+      &__item--skin {
+        background-color: $skin;
+      }
+      &__item--gray {
+        background-color: $gray;
+      }
+      &__item--reddish {
+        background-color: $reddish;
+      }
+    }
+    &-tooltip {
+      position: absolute;
+      background: #fff;
+      @include box(100%);
+      top: 100%;
+      left: 0;
+      z-index: 3;
+      padding: 2rem 2rem 0.7rem;
+      transition: all 0.4s ease;
+      border-radius: 1rem;
+      &--top {
+        padding-right: 3.5rem;
+        position: relative;
+      }
+      &__sale-off {
+        @include font-size(1.4, 1.9);
+        padding: 0.5rem 1rem;
+        background-color: $secondary-color;
+        color: $white;
+        display: inline-block;
+        border-radius: 4px;
+        text-transform: uppercase;
+        margin-bottom: 1.5rem;
+      }
+      &__name a {
+        @include font-size(1.6, 2.2);
+        font-weight: 600;
+        display: block;
+        margin-bottom: 1rem;
+        color: $black;
+      }
+      &__price {
+        @include font-size(2.4, 3.3);
+        font-weight: 600;
+        color: $secondary-color;
+        margin-bottom: 1rem;
+      }
+      &.toggle {
+        top: 0;
+      }
+    }
+    &-action {
+      width: 3.2rem;
+      display: inline-flex;
+      flex-direction: column;
+      gap: 1rem;
+      position: absolute;
+      right: 0;
+      top: 0;
+      a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        @include box(3.2rem);
+        border: 1px solid $black;
+        border-radius: 50%;
+      }
+      &__cart::before {
+        content: "";
+        @include box(1.6rem);
+        background: url(../images/icon-cart.svg) no-repeat center;
+      }
+
+      &__view::before {
+        content: "";
+        @include box(1.6rem);
+        background: url(../images/icon-view.svg) no-repeat center;
+      }
+    }
+    &-attr {
+      @include font-size(1.4, 1.9);
+      overflow-y: auto;
+      li {
+        display: flex;
+        & + li {
+          margin-top: 0.8rem;
+        }
+      }
+      &__label {
+        flex-shrink: 0;
+        width: 9.5rem;
+        margin-right: 1rem;
+        color: $color-text;
+      }
+      &__info {
+        flex: 1;
+        font-weight: 600;
+        color: $black;
+      }
+    }
+  }
+}
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+    @media screen and (max-width: 767px) {
+      @content;
+    }
+  }
+  @if $breakpoint == tablet {
+    @media screen and (max-width: 1023px) {
+      @content;
+    }
+  }
+  @if $breakpoint == desktop {
+    @media (min-width: 1024px) {
+      @content;
+    }
+  }
+}
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+);
+@function breakpoint-next(
+  $name,
+  $breakpoints: $grid-breakpoints,
+  $breakpoint-names: map-keys($breakpoints)
+) {
+  $n: index($breakpoint-names, $name);
+  @return if(
+    $n < length($breakpoint-names),
+    nth($breakpoint-names, $n + 1),
+    null
+  );
+}
+
+@function breakpoint-min($name, $breakpoints: $grid-breakpoints) {
+  $min: map-get($breakpoints, $name);
+  @return if($min != 0, $min, null);
+}
+@function breakpoint-max($name, $breakpoints: $grid-breakpoints) {
+  $next: breakpoint-next($name, $breakpoints);
+  @return if($next, breakpoint-min($next, $breakpoints) - 0.02px, null);
+}
+@function breakpoint-infix($name, $breakpoints: $grid-breakpoints) {
+  @return if(breakpoint-min($name, $breakpoints) == null, "", "-#{$name}");
+}
+@mixin media-breakpoint-up($name, $breakpoints: $grid-breakpoints) {
+  $min: breakpoint-min($name, $breakpoints);
+  @if $min {
+    @media (min-width: $min) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}
+@mixin media-breakpoint-down($name, $breakpoints: $grid-breakpoints) {
+  $max: breakpoint-max($name, $breakpoints);
+  @if $max {
+    @media (max-width: $max) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}
+
+@mixin media-breakpoint-between(
+  $lower,
+  $upper,
+  $breakpoints: $grid-breakpoints
+) {
+  $min: breakpoint-min($lower, $breakpoints);
+  $max: breakpoint-max($upper, $breakpoints);
+
+  @if $min != null and $max != null {
+    @media (min-width: $min) and (max-width: $max) {
+      @content;
+    }
+  } @else if $max == null {
+    @include media-breakpoint-up($lower, $breakpoints) {
+      @content;
+    }
+  } @else if $min == null {
+    @include media-breakpoint-down($upper, $breakpoints) {
+      @content;
+    }
+  }
+}
+@mixin media-breakpoint-only($name, $breakpoints: $grid-breakpoints) {
+  $min: breakpoint-min($name, $breakpoints);
+  $max: breakpoint-max($name, $breakpoints);
+
+  @if $min != null and $max != null {
+    @media (min-width: $min) and (max-width: $max) {
+      @content;
+    }
+  } @else if $max == null {
+    @include media-breakpoint-up($name, $breakpoints) {
+      @content;
+    }
+  } @else if $min == null {
+    @include media-breakpoint-down($name, $breakpoints) {
+      @content;
+    }
+  }
+}
+@mixin section-heading {
+  @include font-size(3, 4.1);
+  font-weight: 600;
+  color: $black;
+  text-transform: uppercase;
+  position: relative;
+  padding-bottom: 1rem;
+  @include media-breakpoint-down(md) {
+    @include font-size(2, 2.7);
+  }
+  &::after {
+    content: "";
+    @include box(17rem, 0.3rem);
+    background: $primary-color;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+}
+@mixin box-food {
+  .box-food {
+    margin-bottom: 2rem;
+    position: relative;
+    overflow: hidden;
+    a {
+      display: flex;
+      justify-content: space-between;
+      flex-flow: row wrap;
+      @include font-size(1.8, 2.4);
+      position: relative;
+      overflow: hidden;
+    }
+    &__name {
+      font-weight: 600;
+      padding-right: 1rem;
+      color: $black;
+      flex-shrink: 0;
+      z-index: 2;
+      background: $white;
+      @include media-breakpoint-down(sm) {
+        @include font-size(1.4, 1.9);
+      }
+    }
+    &__price {
+      font-weight: 600;
+      color: $secondary-color;
+      padding-left: 2rem;
+      flex-shrink: 0;
+      z-index: 2;
+      background: $white;
+      @include media-breakpoint-down(sm) {
+        @include font-size(1.4, 1.9);
+      }
+    }
+    &__desc {
+      width: 100%;
+      margin-top: 1rem;
+      font-style: italic;
+      z-index: 2;
+      color: #484848;
+      @include media-breakpoint-down(sm) {
+        margin-top: 0.6rem;
+        @include font-size(1.4, 1.9);
+      }
+    }
+    &::before {
+      content: "....................................................";
+      width: calc(100% - 2rem);
+      letter-spacing: 0.9rem;
+      color: $black;
+      position: absolute;
+      overflow: hidden;
+    }
+  }
+}

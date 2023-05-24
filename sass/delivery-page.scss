@@ -1,0 +1,90 @@
+// sass ./sass/delivery-page.scss ./css/delivery-page.css --watch
+@import "variables";
+@import "mixin";
+@import "reset";
+@import "global";
+@import "header-page";
+@import "footer";
+.delivery-page{
+    .delivery{
+        padding: 8rem 0;
+        background: #F9F9F9;
+        @include media-breakpoint-down(sm){
+            padding: 3rem 0;  
+        }
+        &-heading {
+            @include section-heading;
+            text-align: center;
+            margin-bottom: 3rem;
+            @include media-breakpoint-down(sm) {
+              margin-bottom: 2rem;
+            }
+            &::after {
+              left: 50%;
+              transform: translateX(-50%);
+            }
+          }
+          &-caption{
+            max-width: 83rem;
+            margin: 0 auto 3rem;
+            text-align: center;
+            @include font(1.4,1.9);
+          }
+          &-list{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-gap: 3rem;
+            margin-bottom: 3rem;
+            @include media-breakpoint-down(md){
+                grid-template-columns: repeat(2,1fr);
+            }
+            @include media-breakpoint-down(sm){
+                grid-template-columns: repeat(1,1fr);
+            }
+          }
+          &-item{
+            padding: 3.8rem 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border-radius: 1rem;
+            background: #fff;
+            transition: all .3s linear;
+            &:hover{
+                background: $primary-color;
+            }
+            &__image{
+                @include box(16.2rem);
+                border-radius: 50%;
+                overflow: hidden;
+                border: 1px solid #fff;
+                margin-bottom: 1rem;
+                img{
+                    width: 100%;
+                    height: 100% !important;
+                    object-fit: cover;
+                }
+            }
+            &__name{
+                padding: 0 2.1rem;
+                color:#000;
+                @include font(1.6,2.2,600);
+                text-align: center;
+            }
+          }
+        &-note{
+            @include font(1.4,1.9);
+            color:#000;
+            span:first-of-type{
+                font-weight: 600;
+            }
+            span:last-of-type{
+                color:$secondary-color;
+                font-weight: 600;
+            }
+        }
+    }
+   
+    
+}

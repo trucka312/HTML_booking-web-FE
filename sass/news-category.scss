@@ -1,0 +1,174 @@
+// sass ./sass/news-category.scss ./css/news-category.css --watch
+@import "variables";
+@import "mixin";
+@import "reset";
+@import "global";
+@import "header";
+@import "footer";
+.news-category {
+  position: relative;
+  .page-banner {
+    position: relative;
+    &-image {
+      @include img-cover(47.951%);
+      @include media-breakpoint-down(md) {
+        padding-top: 47.735% !important;
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.8);
+        z-index: 1;
+      }
+    }
+
+    .container {
+      z-index: 2;
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      left: 50%;
+      bottom: 33.283%;
+      transform: translateX(-50%);
+      @include media-breakpoint-down(sm) {
+        top: 50%;
+        bottom: unset;
+        transform: translate(-50%, -50%);
+      }
+    }
+    .page-title {
+      @include font(4.8, 6.5, 600);
+      color: #fff;
+      margin-bottom: 1rem;
+      @include media-breakpoint-down(sm) {
+        @include font(2.4, 3.3, 600);
+      }
+    }
+  }
+  .news-wrapper{
+    padding: 8rem 0;
+    @include media-breakpoint-down(sm){
+        padding: 3rem 0;
+    }
+  }
+  .news-list {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 3rem;
+    @include media-breakpoint-down(md){
+        grid-template-columns: repeat(2,1fr);
+    }
+    @include media-breakpoint-down(sm){
+        grid-template-columns: repeat(1,1fr);
+    }
+    .box-blog-post {
+      position: relative;
+      box-shadow: 0px 3px 6px #00000029;
+      border-radius: 1rem;
+      padding-bottom: 1.5rem;
+      margin-bottom: 1rem;
+      &:hover{
+        img{
+            transform: scale(1.1)
+        }
+      }
+      &__image {
+        @include img-cover(24rem);
+        border-radius: 1rem 1rem 0 0;
+       
+        overflow: hidden;
+        img{
+            transition: all .4s ease;
+        }
+      }
+      &__title {
+        @include font-size(1.8, 2.4);
+        font-weight: 600;
+        color: $black;
+        padding: 0 1.5rem;
+        margin-bottom: 1rem;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        -webkit-line-clamp: 3;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        @include media-breakpoint-down(sm){
+        margin-bottom: 0.6rem;
+        }
+      }
+      &__date {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        padding: 0 1.5rem;
+        color: #415e6e;
+        @include font-size(1.4, 1.9);
+        display: flex;
+        align-items: center;
+        &::before {
+          content: '';
+          @include box(1.4rem);
+          display: inline-block;
+          background: url(../images//icon-date.svg) no-repeat center;
+          background-size: contain;
+          margin-right: 0.5rem;
+        }
+        @include media-breakpoint-down(sm){
+          margin-top: 0.6rem;
+        margin-bottom: 0.6rem;
+        }
+
+      }
+      &__desc {
+        @include font-size(1.6, 2.2);
+        color: $color-text;
+        padding: 0 1.5rem;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        -webkit-line-clamp: 2;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+      }
+    }
+    @include owl(-4rem);
+    @include media-breakpoint-down(lg) {
+      .owl-nav button.owl-next {
+        right: -2rem !important;
+      }
+      .owl-nav button.owl-prev {
+        left: -2rem !important;
+      }
+    }
+    .owl-nav {
+      display: block;
+      @include media-breakpoint-down(sm) {
+        display: none;
+      }
+    }
+  }
+  .news-pagination {
+    margin-top: 2rem;
+    .pagination {
+      justify-content: center;
+      .page-link {
+        @include font-size(1.4, 2.2);
+        border: none;
+        color: #000000d9;
+        padding: 0rem 0.8rem;
+      }
+      .page-item {
+        &.active .page-link {
+          background-color: unset;
+          color: $primary-color;
+        }
+        &.disabled .page-link {
+          color: #d9d9d9;
+        }
+      }
+    }
+  }
+}

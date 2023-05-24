@@ -1,0 +1,85 @@
+// sass ./sass/guide-page.scss ./css/guide-page.css --watch
+@import 'variables';
+@import 'mixin';
+@import 'reset';
+@import 'global';
+@import 'header';
+@import 'footer';
+.guide-page {
+  position: relative;
+  .page-banner {
+    position: relative;
+    &-image {
+      @include img-cover(47.951%);
+      @include media-breakpoint-down(md) {
+        padding-top: 47.735% !important;
+      }
+      &::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.8);
+        z-index: 1;
+      }
+    }
+
+    .container {
+      z-index: 2;
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      left: 50%;
+      bottom: 33.283%;
+      transform: translateX(-50%);
+      @include media-breakpoint-down(sm) {
+        top: 50%;
+        bottom: unset;
+        transform: translate(-50%, -50%);
+      }
+    }
+    .page-title {
+      @include font(4.8, 6.5, 600);
+      color: #fff;
+      margin-bottom: 1rem;
+      @include media-breakpoint-down(sm) {
+        @include font(2.4, 3.3, 600);
+      }
+    }
+  }
+  .page-wrapper {
+    padding: 8rem 0;
+    @include media-breakpoint-down(sm) {
+      padding: 3rem 0;
+    }
+  }
+  .page-content {
+    h2 {
+      @include font(3, 4.1, 600);
+      color: #000;
+      margin-bottom: 2rem;
+    }
+    h3{
+      @include font(1.6, 2.2, 600);
+      color: #000;
+      margin-bottom: 2rem;
+    }
+    img{
+      display: block;
+      margin-bottom: 2rem;
+    }
+    p{
+      @include font(1.4, 2.2);
+      margin-bottom: 2rem;
+      color: #707070;
+      strong{
+        font-weight: 600;
+
+
+      }
+    }
+  }
+}

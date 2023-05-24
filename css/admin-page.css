@@ -1,0 +1,430 @@
+html,
+body {
+  overflow-x: hidden;
+}
+
+:root {
+  --percent: 100%;
+}
+
+@font-face {
+  font-family: "OpenSans";
+  src: url("../fonts/open-sans-v29-vietnamese-regular.eot");
+  src: url("../fonts/open-sans-v29-vietnamese-regular.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/open-sans-v29-vietnamese-regular.woff") format("woff"),
+    url("../fonts/open-sans-v29-vietnamese-regular.ttf") format("truetype"),
+    url("../fonts/open-sans-v29-vietnamese-regular.svg#OpenSans") format("svg");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "OpenSans";
+  src: url("../fonts/open-sans-v29-vietnamese-500.eot");
+  src: url("../fonts/open-sans-v29-vietnamese-500.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/open-sans-v29-vietnamese-500.woff") format("woff"),
+    url("../fonts/open-sans-v29-vietnamese-500.ttf") format("truetype"),
+    url("../fonts/open-sans-v29-vietnamese-500.svg#OpenSans") format("svg");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "OpenSans";
+  src: url("../fonts/open-sans-v29-vietnamese-600.eot");
+  src: url("../fonts/open-sans-v29-vietnamese-600.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/open-sans-v29-vietnamese-600.woff") format("woff"),
+    url("../fonts/open-sans-v29-vietnamese-600.ttf") format("truetype"),
+    url("../fonts/open-sans-v29-vietnamese-600.svg#OpenSans") format("svg");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "OpenSans";
+  src: url("../fonts/open-sans-v29-vietnamese-700.eot");
+  src: url("../fonts/open-sans-v29-vietnamese-700.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/open-sans-v29-vietnamese-700.woff") format("woff"),
+    url("../fonts/open-sans-v29-vietnamese-700.ttf") format("truetype"),
+    url("../fonts/open-sans-v29-vietnamese-700.svg#OpenSans") format("svg");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "OpenSans";
+  src: url("../fonts/open-sans-v29-vietnamese-italic.eot");
+  src: url("../fonts/open-sans-v29-vietnamese-italic.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/open-sans-v29-vietnamese-italic.woff") format("woff"),
+    url("../fonts/open-sans-v29-vietnamese-italic.ttf") format("truetype"),
+    url("../fonts/open-sans-v29-vietnamese-italic.svg#OpenSans") format("svg");
+  font-weight: 400;
+  font-style: italic;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  line-height: 1;
+  font-family: "OpenSans", sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #484848;
+}
+@media (max-width: 767.98px) {
+  body {
+    font-size: 1.4rem;
+  }
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+strong {
+  font-weight: bold;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+img {
+  border: 0;
+  max-width: 100%;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+p {
+  font-size: 1.4rem;
+  line-height: 1.9rem;
+  color: #484848;
+}
+@media (max-width: 767.98px) {
+  p {
+    font-size: 1.4rem;
+    line-height: 2.1rem;
+  }
+}
+
+.owl-dot:focus {
+  outline: none;
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
+}
+
+.owl-next:focus,
+.owl-prev:focus {
+  outline: none;
+}
+
+.owl-theme .owl-nav {
+  margin-top: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.owl-carousel {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.btn {
+  margin: 3rem auto 0;
+  font-size: 1.6rem;
+  line-height: 2.2rem;
+  padding: 1rem 2rem;
+  border-radius: 0.6rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: block;
+  width: fit-content;
+}
+@media (max-width: 991.98px) {
+  .btn {
+    margin: 2rem auto 0;
+  }
+}
+.btn.btn-primary {
+  background-color: #f2b94c;
+  border-color: #f2b94c;
+  color: #000;
+}
+.btn.btn-primary:hover {
+  opacity: 0.8;
+}
+
+.menu-bars-close {
+  transition: 0.5s;
+}
+.menu-bars-close--toggle {
+  width: 100vw;
+  height: 100vh;
+  z-index: 99;
+  background: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  display: block;
+  top: 0;
+  left: 0;
+}
+
+.wrapper {
+  display: flex;
+}
+
+.sideArea {
+  width: 25rem;
+  background-color: #b1b7db;
+}
+
+.avatar {
+  display: flex;
+  padding: 1rem 1rem;
+}
+
+.avatar-img {
+  border-radius: 58%;
+  width: 7rem;
+}
+
+.avatarName {
+  margin-left: 2rem;
+  padding-top: 2rem;
+  color: #484848;
+}
+
+.sideMenu {
+  border-top: solid 1px;
+  padding-top: 1rem;
+  height: auto;
+}
+
+.menu-item {
+  color: #fff;
+  padding: 1rem 1.5rem;
+  position: relative;
+  cursor: pointer;
+}
+
+.menu-item:hover {
+  background-color: #484848;
+  color: #fff;
+}
+
+.menu-item:hover a{
+  color: #fff;
+}
+
+.border-mid{
+  width: auto;
+  height: 1rem;
+  border-top: 1px solid #333;
+}
+
+.item-bottom{
+  display: flex;
+}
+
+.total-request{
+  color: red;
+  padding-left: 6px;
+}
+
+.main{
+  width: 100%;
+}
+
+.header{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  background-color: #f5f5f5;
+  padding: 1rem;
+}
+
+.header-item{
+  padding: 0 0.7rem;
+}
+
+.header-item--right{
+  cursor: pointer;
+  position: relative;
+}
+
+.header-item--right:hover .header-item--right_children{
+  display: block;
+}
+
+.header-item--right::before{
+  content: "";
+  top: 1rem;
+  position: absolute;
+  width: 11rem;
+  height: 4rem;
+  background: transparent;
+}
+
+.header-item--right_children{
+  display: none;
+  position: absolute;
+  width: 12rem;
+  height: 5rem;
+  top: 2rem;
+  right: 1rem;
+  background-color: #a67070;
+  line-height: 2.5rem;
+  text-align: center;
+  margin-top: 4px;
+  color: #fff;
+}
+
+.item-right_link{
+  color: #fff;
+}
+
+.header-item--right_children :hover{
+  background: #fff;
+  color: #000;
+}
+
+.icon-home{
+  color: #4e3780;
+}
+
+.body{
+  margin-top: 2rem;
+  background-color: #f5f5f5;
+}
+
+.body-title{
+  font-size: 2.5rem;
+  padding: 1rem;
+  font-weight: 700;
+}
+
+.statistical-list{ 
+ display: flex;
+ height: 24rem;
+ margin-top: 2rem;
+ justify-content: space-around;
+}
+
+.statistical-item{
+  width: 20rem;
+  height: 20rem;
+  text-align: center;
+  background: #fff;
+  border-radius: 2rem;
+  margin-left: 1.5rem;
+}
+
+.icon-statistical{
+  color: aqua;
+  font-size: 7rem;
+  margin-top: 1rem;
+}
+
+.food-icon{
+  color: red;
+}
+
+.ticket-icon{
+  color:yellow;
+}
+
+.heart-icon{
+  color: pink;
+}
+
+.number{
+  margin-top: 2rem;
+  font-size: 4rem;
+  font-weight: 700;
+}
+
+.item-name{
+  font-size: 2rem;
+  font-weight: 700;
+  color: #c98d8d;
+}
+
+.chart{
+  height: 56rem;
+  margin-top: 2rem;
+  background: #f5f5f5;
+}
+
+.chart-layout{
+  background: #fff;
+  height: 80%;
+  padding: 1.5rem 0 0 1rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  box-shadow: 2rem ;
+  border: 3px double red;
+  border-radius: 1rem;
+}
+
+.chart-title{
+  padding: 1.5rem 0 0 1.5rem;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.chart-layout--item{
+  height: var(--percent);
+  background: black;
+  color: #fff;
+}
+
+.feedback-icon{
+  color: #62622a;
+}
+
+.like-icon{
+  color: blue;
+}
+

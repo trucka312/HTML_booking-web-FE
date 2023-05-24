@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin page</title>
+
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.15.3/css/all.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="../css/admin-page.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <!--     SIDE AREA -->
+      <div class="sideArea">
+        <div class="avatar">
+          <img
+            class="avatar-img"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCNOdyoIXDDBztO_GC8MFLmG_p6lZ2lTDh1ZnxSDawl1TZY_Zw"
+            alt=""
+          />
+          <div class="avatarName">Welcome,<br />{user name}</div>
+        </div>
+        <div class="sideMenu">
+          <div class="menu-item">
+            <a href="/">BẢNG THỐNG KÊ</a>
+          </div>
+          <div class="menu-item">
+            <a href="">THỰC ĐƠN</a>
+          </div>
+          <div class="menu-item">
+            <a href="">ĐỒ ĂN</a>
+          </div>
+          <div class="menu-item">
+            <a href="">ĐỒ UỐNG</a>
+          </div>
+          <div class="menu-item">
+            <a href="">TIN TỨC</a>
+          </div>
+          <div class="menu-item">
+            <a href="">THƯ VIỆN ẢNH</a>
+          </div>
+          <div class="menu-item">
+            <a href="">HƯỚNG DẪN</a>
+          </div>
+          <div class="menu-item">
+            <a href="">VOURCHER</a>
+          </div>
+          <div class="menu-item">
+            <a href="">LIÊN HỆ</a>
+          </div>
+          <div class="menu-item">
+            <a href="">TÀI KHOẢN KHÁCH</a>
+          </div>
+          <div class="menu-item">
+            <a href="">KH GÓP Ý</a>
+          </div>
+          <!-- SPACE -->
+          <div class="border-mid"></div>
+          <!-- SPACE -->
+          <div class="menu-item item-bottom">
+            <a href="">YC ĐẶT BÀN</a>
+            <span class="total-request">10</span>
+          </div>
+          <div class="menu-item item-bottom">
+            <a href="">YC ĐẶT ĐỒ ĂN</a>
+            <span class="total-request">10</span>
+          </div>
+          <div class="menu-item item-bottom">
+            <a href="">YC TƯ VẤN TD</a>
+            <span class="total-request">10</span>
+          </div>
+          <div class="menu-item item-bottom">
+            <a href="">GÓP Ý CỦA KH</a>
+            <span class="total-request">10</span>
+          </div>
+          <div class="menu-item item-bottom">
+            <a href="">ĐÁNH GIÁ CỦA KH</a>
+            <span class="total-request">10</span>
+          </div>
+        </div>
+      </div>
+      <!--     SIDE AREA -->
+      <!-- body -->
+      <div class="main">
+        <div class="header">
+          <div class="header-item">
+            <i class="fas fa-home icon-home"></i>
+            /
+            <span class="header-title">Bảng Thống Kê</span>
+          </div>
+          <div class="header-item header-item--right">
+            <span class="header-dropdown">{username}</span>
+            <i class="fas fa-angle-down dropdown-icon"></i>
+
+            <div class="header-item--right_children">
+              <div class="item-right_item">
+                <a href="../home-page.html" class="item-right_link">Xem website</a>
+              </div>
+              <div class="item-right_item">
+                <span>Đăng xuất</span>
+                <i class="fas fa-sign-out"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- body nè -->
+        <div class="body">
+          <p class="body-title">Bảng Thống Kê</p>
+          <!-- chỗ thống kê nà -->
+          <div class="statistical-list">
+            <div class="statistical-item">
+              <i class="fas icon-statistical fa-burger-soda"></i> <br>
+              <p class="number">120</p> <br>
+              <span class="item-name">Order</span>
+            </div>
+            <div class="statistical-item">
+              <i class="fas icon-statistical food-icon fa-utensils-alt"></i> <br>
+              <p class="number">120</p> <br>
+              <span class="item-name">Đặt bàn</span>
+            </div>
+            <div class="statistical-item">
+              <i class="fas icon-statistical ticket-icon fa-ticket"></i> <br>
+              <p class="number">120</p> <br>
+              <span class="item-name">Vourcher</span>
+            </div>
+            <div class="statistical-item">
+              <i class="fas icon-statistical heart-icon fa-heart"></i> <br>
+              <p class="number">120</p> <br>
+              <span class="item-name">Đánh giá</span>
+            </div>
+          </div>
+          <!-- hết chỗ thống kê nà -->
+
+          <!-- biểu đồ -->
+          <div class="chart">
+            <p class="chart-title">Biểu Đồ Tăng Trưởng</p>
+            <div class="chart-layout">
+              <div class="chart-layout--item" style="--percent: 10%">10%</div>
+              <div class="chart-layout--item" style="--percent: 20%">20%</div>
+              <div class="chart-layout--item" style="--percent: 27%">27%</div>
+              <div class="chart-layout--item" style="--percent: 87%">87%</div>
+              <div class="chart-layout--item" style="--percent: 82%">82%</div>
+              <div class="chart-layout--item" style="--percent: 72%">72%</div>
+              <div class="chart-layout--item" style="--percent: 90%">90%</div>
+              <div class="chart-layout--item" style="--percent: 27%">27%</div>
+              <div class="chart-layout--item" style="--percent: 13%">13%</div>
+              <div class="chart-layout--item" style="--percent: 8%">8%</div>
+              <div class="chart-layout--item" style="--percent: 2%">2%</div>
+              <div class="chart-layout--item" style="--percent: 100%">100%</div>
+            </div>
+          </div>
+          <!-- xong chart -->
+          <!-- the end -->
+          <p class="chart-title">Feedback</p>
+          <div class="statistical-list">
+            <div class="statistical-item">
+              <i class="fas icon-statistical fa-comment-alt"></i> <br>
+              <p class="number">120</p> <br>
+              <span class="item-name">Đánh Giá</span>
+            </div>
+            <div class="statistical-item">
+              <i class="fas icon-statistical food-icon fa-comment-exclamation"></i> <br>
+              <p class="number">120</p> <br>
+              <span class="item-name">YC Tư Vấn</span>
+            </div>
+            <div class="statistical-item">
+              <i class="fas icon-statistical feedback-icon fa-comment"></i> <br>
+              <p class="number">120</p> <br>
+              <span class="item-name">Góp Ý</span>
+            </div>
+            <div class="statistical-item">
+              <i class="fas icon-statistical like-icon fa-thumbs-up"></i> <br>
+              <p class="number">120</p> <br>
+              <span class="item-name">Like</span>
+            </div>
+          </div>
+          <!-- the end -->
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

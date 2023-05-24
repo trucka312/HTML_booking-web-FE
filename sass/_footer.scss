@@ -1,0 +1,309 @@
+.footer {
+  background: #23282f;
+  @include media-breakpoint-down(sm) {
+    padding: 0 1.5rem;
+  }
+  &--top {
+    padding: 3rem 0;
+    border-bottom: 1px solid rgb(255 255 255 / 40%);
+    @include media-breakpoint-down(sm) {
+      padding: 0 1.5rem 0;
+      border-bottom: none;
+    }
+  }
+
+  &-col {
+    @include media-breakpoint-up(lg) {
+      &.footer-col-1 {
+        width: 33.33%;
+      }
+      &.footer-col-2 {
+        max-width: 19rem;
+        padding-left: 0;
+      }
+      &.footer-col-3 {
+        max-width: 19rem;
+      }
+      &.footer-col-4 {
+        max-width: 43rem;
+      }
+    }
+    @include media-breakpoint-down(md) {
+      padding-bottom: 1.5rem;
+      -ms-flex: 0 0 50%;
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+    @include media-breakpoint-down(sm) {
+      padding: 2rem 0 2rem;
+      -ms-flex: 0 0 100%;
+      flex: 0 0 100%;
+      max-width: 100%;
+      border-bottom: 1px solid #fff;
+      &.footer-col-1 {
+        order: 1;
+      }
+    }
+    &.footer-col-2 {
+      .menu-footer {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 0 3rem;
+      }
+    }
+    &-title {
+      @include font-size(1.6, 2.2);
+      font-weight: 600;
+      color: $primary-color;
+      margin-bottom: 1rem;
+    }
+    &-content {
+      p {
+        @include font-size(1.2, 2.2);
+        color: $white;
+      }
+      p:not(:last-of-type) {
+        margin-bottom: 1rem;
+      }
+    }
+  }
+  &-logo {
+    display: block;
+    margin-bottom: 3rem;
+    img {
+      max-height: 4rem;
+      object-fit: contain;
+    }
+    @include media-breakpoint-down(sm) {
+      display: none;
+    }
+  }
+  &-bct {
+    display: block;
+    img {
+      max-height: 5.6rem;
+      object-fit: contain;
+    }
+    @include media-breakpoint-down(sm) {
+      position: absolute;
+      bottom: 2rem;
+      left: 0;
+    }
+  }
+  &-info {
+    p {
+      position: relative;
+      padding-left: 2rem;
+      &::before {
+        position: absolute;
+        left: 0;
+        font-weight: 700;
+        color: $primary-color;
+      }
+    }
+    &__address {
+      &::before {
+        @include fa5('\f3c5');
+      }
+    }
+    &__phone {
+      &::before {
+        @include fa5('\f879');
+      }
+    }
+    &__email {
+      &::before {
+        @include fa5('\f0e0');
+      }
+    }
+    &__time {
+      &::before {
+        @include fa5('\f017');
+      }
+    }
+  }
+  .menu-footer {
+    &__link a {
+      display: block;
+      @include font-size(1.2, 2.2);
+      color: $white;
+      padding-bottom: 1rem;
+      @include media-breakpoint-down(sm) {
+        @include font-size(1.4, 2.2);
+        font-weight: 600;
+        padding-bottom: 0.6rem;
+      }
+      &:hover {
+        color: $primary-color;
+      }
+    }
+  }
+  & .social-network {
+    margin-left: 5rem;
+    @include media-breakpoint-down(lg) {
+      margin-left: 3rem;
+    }
+    @include media-breakpoint-down(sm) {
+      width: 100%;
+      margin-left: 0;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid #fff;
+    }
+    &__title {
+      @include font-size(1.6, 2.2);
+      font-weight: 600;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+      color: $primary-color;
+    }
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+      & li + li {
+        margin-left: 1rem;
+      }
+      a {
+        @include box(2.4rem);
+        color: #fff;
+        font-size: 1.8rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #fff;
+        border-radius: 50%;
+      }
+    }
+  }
+  .fanpage-facebook {
+    padding: 1rem;
+    border-radius: 0.6rem;
+    position: relative;
+    background: url(../images/bg-fanpage.png) no-repeat center;
+    background-size: cover;
+    display: flex;
+    &::before {
+      content: '';
+      @include box(100%);
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: transparent
+        linear-gradient(180deg, #00000099 0%, #46464690 100%, #ffffff7a 100%) 0%
+        0% no-repeat padding-box;
+    }
+    &-avatar {
+      @include box(9.8rem);
+      flex-shrink: 0;
+      z-index: 1;
+    }
+    &-content {
+      flex: 1;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding-left: 1rem;
+    }
+    &-name {
+      @include font-size(1.4, 2.2);
+      font-weight: 600;
+      color: #fff;
+    }
+    &-like {
+      a {
+        background: #e8e5e5;
+        border-radius: 4px;
+        padding: 0.5rem 1.1rem;
+        @include font-size(1.2, 2.2);
+        font-weight: 600;
+        color: #000;
+        display: inline-flex;
+        align-items: center;
+        img {
+          margin-right: 0.5rem;
+        }
+      }
+      span {
+        @include font-size(1.2, 2.2);
+        font-weight: 600;
+        color: #fff;
+        margin-left: 1rem;
+      }
+    }
+  }
+  &--bottom {
+    padding: 2rem 0;
+    position: relative;
+
+    .row {
+      @include media-breakpoint-down(sm){
+        flex-direction: column-reverse;
+      }
+    }
+    .col {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      @include media-breakpoint-down(sm) {
+        width: 100%;
+        flex-wrap: nowrap;
+        flex-direction: column-reverse;
+        position: unset;
+      }
+      &:last-of-type {
+        justify-content: flex-end;
+        @include media-breakpoint-down(sm) {
+          justify-content: unset;
+          flex-direction: column;
+        }
+      }
+    }
+    .menu-footer {
+      display: flex;
+      gap: 1.5rem;
+      @include media-breakpoint-down(sm) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        width: 100%;
+        padding: 2rem 0;
+        border-bottom: 1px solid #fff;
+        gap: 0.6rem;
+      }
+      &__link a {
+        @include font-size(1.2, 2.2);
+        color: #fff;
+        padding-bottom: 0;
+      }
+    }
+  }
+  &-copyright {
+    @include font-size(1.2, 2.2);
+    text-transform: uppercase;
+    color: #b7b7b7;
+    display: block;
+    width: 100%;
+    margin-bottom: 1.5rem;
+    @include media-breakpoint-down(sm) {
+      padding-top: 2rem;
+      margin-bottom: 7.1rem;
+    }
+  }
+  .btn-booking {
+    position: fixed;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #be1522;
+    border-radius: 6px 0px 0px 6px;
+    padding: 1.5rem;
+    z-index: 10;
+    @include font-size(1.6, 2.2);
+    font-weight: 600;
+    color: #fff;
+    transition: all 0.3s ease;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}

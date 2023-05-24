@@ -1,0 +1,105 @@
+a:hover {
+  color: $primary-color;
+}
+
+.owl-next:focus,
+.owl-prev:focus {
+  outline: none;
+}
+.owl-theme .owl-nav {
+  margin-top: 0;
+}
+.owl-carousel {
+  padding-left: 0;
+  padding-right: 0;
+}
+.btn {
+  margin: 3rem auto 0;
+  @include font-size(1.6, 2.2);
+  padding: 1rem 2rem;
+  border-radius: 0.6rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: block;
+  width: fit-content;
+  @include media-breakpoint-down(md) {
+    margin: 2rem auto 0;
+  }
+  &.btn-primary {
+    background-color: $primary-color;
+    border-color: $primary-color;
+    color: $black;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+.menu-bars-close {
+  transition: 0.5s;
+  &--toggle {
+    width: 100vw;
+    height: 100vh;
+    z-index: 99;
+    background: rgba(0, 0, 0, 0.4);
+    position: fixed;
+    display: block;
+    top: 0;
+    left: 0;
+  }
+}
+.section-py {
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+  @include media-breakpoint-down(md) {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+}
+.breadcrumb {
+  background: transparent;
+  margin-bottom: 0;
+  padding: 0;
+  @include media-breakpoint-down(md) {
+    margin-bottom: 4rem;
+  }
+  @include media-breakpoint-down(sm) {
+    margin-bottom: 1.5rem;
+    height: auto;
+  }
+  &-list {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+  }
+  &-item {
+    a {
+      color: #FFFFFF73;
+      @include font-size(1.4, 2.2);
+      &:hover {
+        color: #000000;
+      }
+    }
+    &.active {
+      color: #fff;
+      @include font-size(1.4, 2.2);
+    }
+    & + .breadcrumb-item {
+      padding-left: 0.8rem;
+      &::before {
+        padding-right: 0.8rem;
+        color: #FFFFFF73;
+      }
+    }
+  }
+}
+.modal-open .modal {
+  padding: 0 !important;
+  background: rgb(43 43 43 / 70%);
+  .modal-body{
+    padding: 0;
+  }
+  .modal-dialog{
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}

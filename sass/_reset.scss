@@ -1,0 +1,200 @@
+html,
+body {
+  overflow-x: hidden;
+}
+@include font-face(
+  OpenSans,
+  '../fonts/open-sans-v29-vietnamese-regular',
+  400,
+  normal
+);
+@include font-face(
+  OpenSans,
+  '../fonts/open-sans-v29-vietnamese-500',
+  500,
+  normal
+);
+@include font-face(
+  OpenSans,
+  '../fonts/open-sans-v29-vietnamese-600',
+  600,
+  normal
+);
+@include font-face(
+  OpenSans,
+  '../fonts/open-sans-v29-vietnamese-700',
+  700,
+  normal
+);
+@include font-face(
+  OpenSans,
+  '../fonts/open-sans-v29-vietnamese-italic',
+  400,
+  italic
+);
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  outline: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.6rem;
+  line-height: 1;
+  font-family: 'OpenSans', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #484848;
+  @include media-breakpoint-down(sm) {
+    font-size: 1.4rem;
+  }
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+strong {
+  font-weight: bold;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+img {
+  border: 0;
+  max-width: 100%;
+}
+a:hover {
+  text-decoration: none;
+}
+p {
+  @include font-size(1.4, 1.9);
+  color: #484848;
+  @include media-breakpoint-down(sm) {
+    @include font-size(1.4, 2.1);
+  }
+}
+.owl-dot:focus {
+  outline: none;
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
+}
