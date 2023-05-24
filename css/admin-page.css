@@ -428,3 +428,62 @@ a {
   color: blue;
 }
 
+@media (max-width: 374px){
+  .avatar{
+    display: block;
+  }
+  .avatarName{
+    margin-left: 0;
+  }
+  .menu-item {
+    font-size: 0.8rem;
+    color: #fff;
+    padding: 1rem 0.5rem;
+    position: relative;
+    cursor: pointer;
+  }
+  .header{
+    max-width: 80%;
+  }
+  .body-title{
+    font-size: 1.5rem;
+  }
+  .statistical-item {
+    width: 12rem;
+    height: 11rem;
+    text-align: center;
+    background: #fff;
+    border-radius: 2rem;
+    margin-left: 1.5rem;
+  }
+  .icon-statistical{
+    font-size: 2rem;
+  }
+  .number{
+    font-size: 2rem;
+  }
+  .item-name{
+    line-height: 1rem;
+    font-size: 1rem;
+  }
+  .chart-title{
+    font-size: 1.5rem;
+  }
+  .chart-layout--item{
+    width: 23px;
+  }
+}
+
+@media (min-width: 768px){
+  .statistical-list {
+  display: flex;
+  height: auto;
+  margin-top: 2rem;
+  justify-content: space-around;
+  margin-left: 5rem;
+  }
+  .statistical-item{
+    height: 18rem;
+    margin: 2rem;
+  }
+}
