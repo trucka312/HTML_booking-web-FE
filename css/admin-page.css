@@ -1,275 +1,11 @@
-html,
-body {
-  overflow-x: hidden;
-}
-
-:root {
-  --percent: 100%;
-}
-
-@font-face {
-  font-family: "OpenSans";
-  src: url("../fonts/open-sans-v29-vietnamese-regular.eot");
-  src: url("../fonts/open-sans-v29-vietnamese-regular.eot?#iefix")
-      format("embedded-opentype"),
-    url("../fonts/open-sans-v29-vietnamese-regular.woff") format("woff"),
-    url("../fonts/open-sans-v29-vietnamese-regular.ttf") format("truetype"),
-    url("../fonts/open-sans-v29-vietnamese-regular.svg#OpenSans") format("svg");
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: "OpenSans";
-  src: url("../fonts/open-sans-v29-vietnamese-500.eot");
-  src: url("../fonts/open-sans-v29-vietnamese-500.eot?#iefix")
-      format("embedded-opentype"),
-    url("../fonts/open-sans-v29-vietnamese-500.woff") format("woff"),
-    url("../fonts/open-sans-v29-vietnamese-500.ttf") format("truetype"),
-    url("../fonts/open-sans-v29-vietnamese-500.svg#OpenSans") format("svg");
-  font-weight: 500;
-  font-style: normal;
-}
-@font-face {
-  font-family: "OpenSans";
-  src: url("../fonts/open-sans-v29-vietnamese-600.eot");
-  src: url("../fonts/open-sans-v29-vietnamese-600.eot?#iefix")
-      format("embedded-opentype"),
-    url("../fonts/open-sans-v29-vietnamese-600.woff") format("woff"),
-    url("../fonts/open-sans-v29-vietnamese-600.ttf") format("truetype"),
-    url("../fonts/open-sans-v29-vietnamese-600.svg#OpenSans") format("svg");
-  font-weight: 600;
-  font-style: normal;
-}
-@font-face {
-  font-family: "OpenSans";
-  src: url("../fonts/open-sans-v29-vietnamese-700.eot");
-  src: url("../fonts/open-sans-v29-vietnamese-700.eot?#iefix")
-      format("embedded-opentype"),
-    url("../fonts/open-sans-v29-vietnamese-700.woff") format("woff"),
-    url("../fonts/open-sans-v29-vietnamese-700.ttf") format("truetype"),
-    url("../fonts/open-sans-v29-vietnamese-700.svg#OpenSans") format("svg");
-  font-weight: 700;
-  font-style: normal;
-}
-@font-face {
-  font-family: "OpenSans";
-  src: url("../fonts/open-sans-v29-vietnamese-italic.eot");
-  src: url("../fonts/open-sans-v29-vietnamese-italic.eot?#iefix")
-      format("embedded-opentype"),
-    url("../fonts/open-sans-v29-vietnamese-italic.woff") format("woff"),
-    url("../fonts/open-sans-v29-vietnamese-italic.ttf") format("truetype"),
-    url("../fonts/open-sans-v29-vietnamese-italic.svg#OpenSans") format("svg");
-  font-weight: 400;
-  font-style: italic;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 html {
   font-size: 62.5%;
-}
-
-body {
-  font-size: 1.6rem;
-  line-height: 1;
-  font-family: "OpenSans", sans-serif;
-  margin: 0;
-  padding: 0;
-  color: #484848;
-}
-@media (max-width: 767.98px) {
-  body {
-    font-size: 1.4rem;
-  }
-}
-
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-  display: block;
-}
-
-ol,
-ul {
-  list-style: none;
-}
-
-blockquote,
-q {
-  quotes: none;
-}
-
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-  content: "";
-  content: none;
-}
-
-strong {
-  font-weight: bold;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-img {
-  border: 0;
-  max-width: 100%;
-}
-
-a:hover {
-  text-decoration: none;
-}
-
-p {
-  font-size: 1.4rem;
-  line-height: 1.9rem;
-  color: #484848;
-}
-@media (max-width: 767.98px) {
-  p {
-    font-size: 1.4rem;
-    line-height: 2.1rem;
-  }
-}
-
-.owl-dot:focus {
-  outline: none;
-}
-
-@media (min-width: 1200px) {
-  .container {
-    max-width: 1200px;
-  }
-}
-
-.owl-next:focus,
-.owl-prev:focus {
-  outline: none;
-}
-
-.owl-theme .owl-nav {
-  margin-top: 0;
-}
-
-a {
-  text-decoration: none;
-}
-
-.owl-carousel {
-  padding-left: 0;
-  padding-right: 0;
-}
-
-.btn {
-  margin: 3rem auto 0;
-  font-size: 1.6rem;
-  line-height: 2.2rem;
-  padding: 1rem 2rem;
-  border-radius: 0.6rem;
-  font-weight: 600;
-  transition: all 0.3s ease;
-  display: block;
-  width: fit-content;
-}
-@media (max-width: 991.98px) {
-  .btn {
-    margin: 2rem auto 0;
-  }
-}
-.btn.btn-primary {
-  background-color: #f2b94c;
-  border-color: #f2b94c;
-  color: #000;
-}
-.btn.btn-primary:hover {
-  opacity: 0.8;
-}
-
-.menu-bars-close {
-  transition: 0.5s;
-}
-.menu-bars-close--toggle {
-  width: 100vw;
-  height: 100vh;
-  z-index: 99;
-  background: rgba(0, 0, 0, 0.4);
-  position: fixed;
-  display: block;
-  top: 0;
-  left: 0;
-}
-
-.wrapper {
-  display: flex;
-}
-
-.sideArea {
-  width: 25rem;
-  background-color: #b1b7db;
-}
-
-.avatar {
-  display: flex;
-  padding: 1rem 1rem;
-}
-
-.avatar-img {
-  border-radius: 58%;
-  width: 7rem;
-}
-
-.avatarName {
-  margin-left: 2rem;
-  padding-top: 2rem;
-  color: #484848;
-}
-
-.sideMenu {
-  border-top: solid 1px;
-  padding-top: 1rem;
-  height: auto;
-}
-
-.menu-item {
-  color: #fff;
-  padding: 1rem 1.5rem;
-  position: relative;
-  cursor: pointer;
-}
-
-.menu-item:hover {
-  background-color: #484848;
-  color: #fff;
-}
-
-.menu-item:hover a{
-  color: #fff;
-}
-
-.border-mid{
-  width: auto;
-  height: 1rem;
-  border-top: 1px solid #333;
-}
-
-.item-bottom{
-  display: flex;
-}
-
-.total-request{
-  color: red;
-  padding-left: 6px;
 }
 
 .main{
@@ -349,6 +85,7 @@ a {
  height: 24rem;
  margin-top: 2rem;
  justify-content: space-around;
+ padding-top: 2rem;
 }
 
 .statistical-item{
@@ -398,7 +135,7 @@ a {
 
 .chart-layout{
   background: #fff;
-  height: 80%;
+  height: 100%;
   padding: 1.5rem 0 0 1rem;
   display: flex;
   justify-content: space-around;
@@ -418,6 +155,7 @@ a {
   height: var(--percent);
   background: black;
   color: #fff;
+  width: 3.2rem;
 }
 
 .feedback-icon{
@@ -427,7 +165,7 @@ a {
 .like-icon{
   color: blue;
 }
-
+/* 
 @media (max-width: 374px){
   .avatar{
     display: block;
@@ -486,4 +224,4 @@ a {
     height: 18rem;
     margin: 2rem;
   }
-}
+} */

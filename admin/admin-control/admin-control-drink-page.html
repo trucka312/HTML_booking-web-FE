@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quản lí đồ uống</title>
+
+  <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.15.3/css/all.css"
+    />
+
+  <link rel="stylesheet" href="../../css/admin-control-page.css">
+</head>
+<body>
+  <!-- header -->
+  <header class="header">
+    <div class="header-item">
+      <h3 class="header__title">Quản lí đồ uống</h3>
+      <h5 class="header__subtitle">chào mừng quay trở lại !</h5>
+    </div>
+    <div class="header-item header-item--right">
+      <span class="header-dropdown">{username}</span>
+        <i class="fas fa-angle-down dropdown-icon"></i>
+        <div class="header-item--right_children">
+          <div class="item-right_item">
+            <a href="../../home-page.html" class="item-right_link">
+              <span class="header_text_drop">Xem website</span>
+            </a>
+          </div>
+          <div class="item-right_item">
+            <span class="header_text_drop">Đăng xuất</span>
+            <i class="fas fa-sign-out dropdown-icon"></i>
+          </div>
+        </div>
+    </div>
+  </header>
+
+  <!-- body -->
+  <div class="container">
+    <nav class="navigation">
+      <ul class="navigation__list">
+        <li class="navigation__item"><a href="admin-home-page.html" class="navigation__link">Bảng thống kê</a></li>
+        <li class="navigation__item"><a href="admin-control-order-page.html" class="navigation__link">Đặt hàng</a></li>
+        <li class="navigation__item"><a href="admin-control-booking-page.html" class="navigation__link">Đặt bàn</a></li>
+        <li class="navigation__item"><a href="admin-control-menu-consultation-page.html" class="navigation__link">YC tư vấn thực đơn</a></li>
+        <li class="navigation__item"><a href="admin-control-evaluate-page.html" class="navigation__link">Đánh giá</a></li>
+        <li class="navigation__item"><a href="admin-control-menu-page.html" class="navigation__link">Thực đơn</a></li>
+        <li class="navigation__item"><a href="admin-control-food-page.html" class="navigation__link">Món ăn</a></li>
+        <li class="navigation__item"><a href="admin-control-drink-page.html" class="navigation__link">Đồ uống</a></li>
+        <li class="navigation__item"><a href="admin-control-vourcher-page.html" class="navigation__link">Vourcher</a></li>
+        <li class="navigation__item"><a href="admin-control-news-page.html" class="navigation__link">Tin tức</a></li>
+        <li class="navigation__item"><a href="admin-control-photo-library.html" class="navigation__link">Thư viện ảnh</a></li>
+        <li class="navigation__item"><a href="admin-control-account-page.html" class="navigation__link">Tài khoản</a></li>
+      </ul>
+    </nav>
+    <div class="content">
+      <div class="admin">
+        <div class="admin__control__search">
+          <form action="" class="form-search">
+            <input type="text" placeholder="Nhập gì đó để tìm kiếm ..."/>
+            <button type="submit">Tìm kiếm</button>
+          </form>
+        </div>
+      </div>
+        <div class="admin__control">
+          <div class="admin__control__text">
+            <span>Tất cả </span>
+            <span>Thêm mới</span>
+          </div>
+        <div class="admin__data">
+          <table>
+            <thead>
+              <tr>
+                <td>id</td>
+                <td>tên</td>
+                <td>ảnh</td>
+                <td>đơn giá</td>
+                <td>trạng thái</td>
+                <td>ghi chú</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Nước Dừa</td>
+                <td><img class="image-avatar" src="../../images/menu-detail1.png" alt=""></td>
+                <td>30.000</td>
+                <td>đang kinh doanh</td>                
+                <td>nước dừa tươi, rất tươi</td>                
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Nước Dừa</td>
+                <td><img class="image-avatar" src="../../images/menu-detail1.png" alt=""></td>
+                <td>30.000</td>
+                <td>đang kinh doanh</td>                
+                <td>nước dừa tươi, rất tươi</td>                
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Nước Dừa</td>
+                <td><img class="image-avatar" src="../../images/menu-detail1.png" alt=""></td>
+                <td>30.000</td>
+                <td>đang kinh doanh</td>                
+                <td>nước dừa tươi, rất tươi</td>                
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Nước Dừa</td>
+                <td><img class="image-avatar" src="../../images/menu-detail1.png" alt=""></td>
+                <td>30.000</td>
+                <td>đang kinh doanh</td>                
+                <td>nước dừa tươi, rất tươi</td>                
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Nước Dừa</td>
+                <td><img class="image-avatar" src="../../images/menu-detail1.png" alt=""></td>
+                <td>30.000</td>
+                <td>đang kinh doanh</td>                
+                <td>nước dừa tươi, rất tươi</td>                
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Nước Dừa</td>
+                <td><img class="image-avatar" src="../../images/menu-detail1.png" alt=""></td>
+                <td>30.000</td>
+                <td>đang kinh doanh</td>                
+                <td>nước dừa tươi, rất tươi</td>                
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Nước Dừa</td>
+                <td><img class="image-avatar" src="../../images/menu-detail1.png" alt=""></td>
+                <td>30.000</td>
+                <td>đang kinh doanh</td>                
+                <td>nước dừa tươi, rất tươi</td>                
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Nước Dừa</td>
+                <td><img class="image-avatar" src="../../images/menu-detail1.png" alt=""></td>
+                <td>30.000</td>
+                <td>đang kinh doanh</td>                
+                <td>nước dừa tươi, rất tươi</td>                
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
