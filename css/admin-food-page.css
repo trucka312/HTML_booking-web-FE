@@ -1,0 +1,150 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.body-food {
+  padding: 2rem;
+}
+
+.product-list {
+  border: 2px solid #159b9b;
+  border-radius: 1rem;
+}
+
+.product-list--header {
+  margin-top: 2rem;
+}
+
+.product-list--title {
+  font-size: 3rem;
+  margin-left: 3rem;
+  font-weight: 700;
+}
+
+.header-bottom {
+  background: #9b89bf;
+  margin-top: 2rem;
+}
+
+.header-bottom--item {
+  height: 6rem;
+  display: flex;
+  font-size: 2.5rem;
+  justify-content: space-around;
+  padding: 1rem;
+  color: #333;
+  font-weight: 600;
+}
+
+.header-bottom--item_title {
+  font-size: 2.2rem;
+  line-height: 3.6rem;
+  color: #484848;
+}
+
+.product-item {
+  padding-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding-left: 5rem;
+  border-bottom: 1px solid #333;
+  padding-bottom: 1rem;
+  border-radius: 2rem;
+}
+
+.product-text {
+  font-size: 2rem;
+}
+
+.product-item-img {
+  width: 22rem;
+}
+
+.product-item--btn {
+  outline: none;
+  border: none;
+  padding: 1.5rem;
+  width: 9.5rem;
+  border-radius: 2rem;
+  color: #932323;
+  font-weight: 600;
+  background: #aeafe5;
+}
+
+/* gì đó */
+
+.body-add {
+  padding: 1.5rem;
+  border: 1px solid;
+  border-radius: 2rem;
+  margin-bottom: 4rem;
+}
+
+/* DETAIL FORM */
+.inputGroup {
+  display: block;
+  margin-bottom: 10px;
+}
+.inputGroup > span:first-child {
+  width: 100px;
+  padding-bottom: 10px;
+  text-align: right;
+  padding-right: 10px;
+  vertical-align: top;
+}
+.inputGroup > span {
+  display: table-cell;
+}
+.inputGroup input,
+.inputGroup select {
+  margin-bottom: 10px;
+}
+.form textarea {
+  width: 100%;
+  min-height: 20em;
+}
+#pagination {
+  margin-top: 20px;
+}
+.btnNewInput {
+  padding: 0.6em;
+}
+.inputNumber {
+  max-width: 3em;
+  padding: 0.5em 0;
+  text-align: center;
+}
+
+.formHeader{
+  padding: 1rem 1.5rem;
+  display: flex;
+  justify-content: space-around;
+  font-size: 2rem;
+  font-weight: 700;
+  background: antiquewhite;
+  margin-bottom: 1rem;
+}
+
+.btnSave{
+  font-size: 1.5rem;
+  outline: none;
+  border: none;
+  background: #8f8ad0;
+  width: 8rem;
+  height: 3.6rem;
+  border-radius: 2px;
+  color: #fff;
+}
+
+.input__form{
+  border-radius: 2px;
+}
+
+.note-text{
+  margin-left: 2rem;
+}

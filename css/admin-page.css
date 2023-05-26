@@ -443,7 +443,7 @@ a {
     cursor: pointer;
   }
   .header{
-    max-width: 80%;
+    max-width: 100%;
   }
   .body-title{
     font-size: 1.5rem;
