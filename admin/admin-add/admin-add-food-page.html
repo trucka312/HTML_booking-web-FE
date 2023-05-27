@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thêm mới tài khoản</title>
+
+  <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.15.3/css/all.css"
+    />
+
+  <link rel="stylesheet" href="../../css/admin-control-page.css">
+</head>
+<body>
+  <!-- header -->
+  <header class="header">
+    <div class="header-item">
+      <h3 class="header__title">Thêm mới món ăn mới</h3>
+      <h5 class="header__subtitle">chào mừng quay trở lại !</h5>
+    </div>
+    <div class="header-item header-item--right">
+      <span class="header-dropdown">{username}</span>
+        <i class="fas fa-angle-down dropdown-icon"></i>
+        <div class="header-item--right_children">
+          <div class="item-right_item">
+            <a href="../../home-page.html" class="item-right_link">
+              <span class="header_text_drop">Xem website</span>
+            </a>
+          </div>
+          <div class="item-right_item">
+            <span class="header_text_drop">Đăng xuất</span>
+            <i class="fas fa-sign-out dropdown-icon"></i>
+          </div>
+        </div>
+    </div>
+  </header>
+
+  <!-- body -->
+  <div class="container">
+    <nav class="navigation">
+      <ul class="navigation__list">
+        <li class="navigation__item">
+          <a href="../admin-control/admin-home-page.html" class="navigation__link">Bảng thống kê</a>
+        </li>
+        <li class="navigation__item">
+          <a href="../admin-control/admin-control-order-page.html" class="navigation__link">Đặt hàng</a>
+        </li>
+        <li class="navigation__item">
+          <a href="../admin-control/admin-control-booking-page.html" class="navigation__link">Đặt bàn</a>
+        </li>
+        <li class="navigation__item">
+          <a href="../admin-control/admin-control-menu-consultation-page.html" class="navigation__link">YC tư vấn thực đơn</a>
+        </li>
+        <li class="navigation__item">
+          <a href="../admin-control/admin-control-evaluate-page.html" class="navigation__link">Đánh giá</a>
+        </li>
+        <li class="navigation__item">
+          <a href="../admin-control/admin-control-menu-page.html" class="navigation__link">Thực đơn</a>
+        </li>
+        <li class="navigation__item">
+          <a href="../admin-control/admin-control-food-page.html" class="navigation__link">Món ăn</a>
+        </li>
+        <li class="navigation__item">
+          <a href="../admin-control/admin-control-drink-page.html" class="navigation__link">Đồ uống</a>
+        </li>
+        <li class="navigation__item">
+          <a href="../admin-control/admin-control-vourcher-page.html" class="navigation__link">Vourcher</a>
+        </li>
+        <li class="navigation__item">
+          <a href="../admin-control/admin-control-news-page.html" class="navigation__link">Tin tức</a>
+        </li>
+        <li class="navigation__item">
+          <a href="../admin-control/admin-control-photo-library.html" class="navigation__link">Thư viện ảnh</a>
+        </li>
+        <li class="navigation__item">
+          <a href="../admin-control/admin-control-account-page.html" class="navigation__link">Tài khoản</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- body -->
+
+    <div class="content">
+      <form action="" method="post" class="form__add">
+
+        <div class="form_add__name first_add_item">
+          <label class="form_text" for="name">Tên đồ ăn mới</label> <br>
+          <input class="form_add__input" type="text" name="name" placeholder="Aa">
+        </div>
+
+        <div class="form_add__name">
+          <label class="form_text" for="type">Loại</label> <br>
+          <input class="form_add__input" type="text" name="type" placeholder="Aa">
+        </div>
+
+        <div class="form_add__name">
+          <label class="form_text" for="category">Danh mục</label> <br>
+          <select name="category" id="cars" class="selected_item">
+            <option value="khaivi">Khai vị</option>
+            <option value="monchinh">Món chính</option>
+          </select>
+        </div>
+
+        <div class="form_add__name">
+          <label class="form_text" for="pass">Đơn giá</label> <br>
+          <input class="form_add__input" type="text" name="pass" placeholder="Aa">
+        </div>
+
+        <div class="form_add__name padding_y">
+          <label class="form_text" for="img">Ảnh</label> <br>
+          <!-- lấy dữ liệu ảnh của input này -->
+          <input class="form_add__input" type="text" name="image"> <br>
+          <!-- cái này chỉ để hiện ảnh lên thôi -->
+          <div class="img_input">
+            <input  type="file" name="img" placeholder="Aa" onchange="getImg(this)" class="file_input"> <br>
+          </div>
+        </div>
+
+        <div class="form_add__name">
+          <br><label class="form_text" for="date">Trạng thái</label> <br>
+          <input class="form_add__input" type="text" name="date" placeholder="Aa">
+        </div>
+
+        <div class="form_add__name pb_3rem">
+          <label class="form_text" for="note">ghi chú</label> <br>
+          <textarea class="text_area" name="note" cols="30" rows="10"></textarea>
+        </div>
+
+        <div class="form_add__name input_btn">
+          <button type="submit" name="btn-sub" class="custom-btn btn-12"><span>Xác nhận</span><span>Thêm</span></button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    function getImg(x){
+    if( x.files.length > 0 ){
+        var fr = new FileReader();
+        var imgSrc = null;
+        var parent = x.parentElement;
+        fr.onload = function(e){
+            imgSrc = e.target.result;
+            if( parent.getElementsByTagName("img").length > 0 ){
+                parent.removeChild(parent.getElementsByTagName("img")[0]);
+            }
+            var img = document.createElement("img");
+            img.setAttribute("src",imgSrc);
+            img.style.width = "80px";
+            img.style.verticalAlign = "top";
+            parent.appendChild(img);
+        }
+        fr.readAsDataURL(x.files[0]);
+    }
+  }
+
+  </script>
+</body>
+</html>
