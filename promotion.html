@@ -71,7 +71,7 @@
               <span class="promotion">GIẢM : <strong class="promotion-value">400k</strong></span>
               <br><span class="promotion">Đơn hàng tối thiểu : <strong class="promotion-minimum">250.000đ</strong></span>
               <br><span class="promotion">Còn lại : <strong class="promotion-remaining">100%</strong></span>
-              <br><span class="promotion">MÃ : <strong class="promotion-code">AZALKSDLDL</strong></span>
+              <br><span class="promotion">MÃ : <strong id="promotion_text" class="promotion-code">AZALKSDLDL</strong></span>
               <br><span class="promotion">Hạn SD : <strong class="promotion-expiry">12/09/2023</strong></span>
               <br><span class="promotion">Lưu ý :<strong class="item-note">Chỉ áp dụng cho sản phẩm của VMMS cung cấp</strong></span>
               <br><button class="promotion-btn" onclick="copyCouponCode(event, 'COSLUX05', 'https://shope.ee/an_redir?origin_link=https%3A%2F%2Fshopee.vn%2Fsearch%3FpromotionId%3D613398027468800%26signature%3D9da90109160ec2cee32ac6c0e9a1ae26f3cb73cc7049d622bf0418649854febb&amp;affiliate_id=17310730002&amp;sub_id=SL_1----', true)">copy</button>
@@ -86,7 +86,7 @@
               <span class="promotion">GIẢM : <strong class="promotion-value">400k</strong></span>
               <br><span class="promotion">Đơn hàng tối thiểu : <strong class="promotion-minimum">250.000đ</strong></span>
               <br><span class="promotion">Còn lại : <strong class="promotion-remaining">100%</strong></span>
-              <br><span class="promotion">MÃ : <strong class="promotion-code">AZALKSDLDL</strong></span>
+              <br><span class="promotion">MÃ : <strong id="promotion_text" class="promotion-code">AZALKSDLDL</strong></span>
               <br><span class="promotion">Hạn SD : <strong class="promotion-expiry">12/09/2023</strong></span>
               <br><span class="promotion">Lưu ý :<strong class="item-note">Chỉ áp dụng cho sản phẩm của VMMS cung cấp</strong></span>
               <br><button class="promotion-btn">copy</button>
@@ -100,7 +100,7 @@
               <span class="promotion">GIẢM : <strong class="promotion-value">400k</strong></span>
               <br><span class="promotion">Đơn hàng tối thiểu : <strong class="promotion-minimum">250.000đ</strong></span>
               <br><span class="promotion">Còn lại : <strong class="promotion-remaining">100%</strong></span>
-              <br><span class="promotion">MÃ : <strong class="promotion-code">AZALKSDLDL</strong></span>
+              <br><span class="promotion">MÃ : <strong id="promotion_text" class="promotion-code">AZALKSDLDL</strong></span>
               <br><span class="promotion">Hạn SD : <strong class="promotion-expiry">12/09/2023</strong></span>
               <br><span class="promotion">Lưu ý :<strong class="item-note">Chỉ áp dụng cho sản phẩm của VMMS cung cấp</strong></span>
               <br><button class="promotion-btn">copy</button>
@@ -114,7 +114,7 @@
               <span class="promotion">GIẢM : <strong class="promotion-value">400k</strong></span>
               <br><span class="promotion">Đơn hàng tối thiểu : <strong class="promotion-minimum">250.000đ</strong></span>
               <br><span class="promotion">Còn lại : <strong class="promotion-remaining">100%</strong></span>
-              <br><span class="promotion">MÃ : <strong class="promotion-code">AZALKSDLDL</strong></span>
+              <br><span class="promotion">MÃ : <strong class="promotion-code" id="promotion_text">AZALKSDLDL</strong></span>
               <br><span class="promotion">Hạn SD : <strong class="promotion-expiry">12/09/2023</strong></span>
               <br><span class="promotion">Lưu ý :<strong class="item-note">Chỉ áp dụng cho sản phẩm của VMMS cung cấp</strong></span>
               <br><button class="promotion-btn">copy</button>
@@ -128,14 +128,47 @@
               <span class="promotion">GIẢM : <strong class="promotion-value">400k</strong></span>
               <br><span class="promotion">Đơn hàng tối thiểu : <strong class="promotion-minimum">250.000đ</strong></span>
               <br><span class="promotion">Còn lại : <strong class="promotion-remaining">100%</strong></span>
-              <br><span class="promotion">MÃ : <input class="promotion-code" value="AZALKSDLDL" /></span>
+              <br><span class="promotion">MÃ : <strong class="promotion-code" id="promotion_text">tesst</strong></span>
               <br><span class="promotion">Hạn SD : <strong class="promotion-expiry">12/09/2023</strong></span>
               <br><span class="promotion">Lưu ý :<strong class="item-note">Chỉ áp dụng cho sản phẩm của VMMS cung cấp</strong></span>
-              <br><button class="promotion-btn">copy</button>
+              <br><button id="btn_cop" class="promotion-btn">copy</button>
             </div>
           </div>
       </div>
     </main>
   </div>
+  <script>
+    function copyVourcher(){
+      let input = document.getElementById('promotion_text')
+      try {
+        let value = input.textContent;
+        if(navigator.clipboard) {   
+          navigator.clipboard.writeText(value);
+          console.log(`The text '${value}' is in the Clipboard Now!`);
+        } else {
+          console.log(`Clipboard API is Not Supported`);
+        }
+      } catch (err) {
+        console.error(`Failed to copy: ${err}`);
+      }
+    }
+
+    function pasteVourcher(){
+      try {
+        if (navigator.clipboard) {
+          const fromClipboard = navigator.clipboard.readText();
+          input.value = fromClipboard;
+          console.log(`The text '${fromClipboard}' is pasted successfully!`);
+        } else {
+          console.log(`Clipboard API is Not Supported`);
+        }
+      } catch (err) {
+        console.error(`Failed to paste: ${err}`);
+      }
+    }
+    pasteVourcher()
+    const copybtn = document.getElementById('btn_cop');
+    copybtn.onclick = copyVourcher();
+  </script>
 </body>
 </html>

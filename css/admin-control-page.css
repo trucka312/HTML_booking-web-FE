@@ -93,6 +93,7 @@ html {
   margin-top: 1rem;
   display: flex;
   justify-content: center;
+  position: relative;
   background-color: #f7f7f7;
 }
 .container .navigation {
@@ -109,6 +110,8 @@ html {
   height: 4rem;
   display: flex;
   align-items: center;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #646427;
 }
 .container .navigation__item:not(:last-child) {
   margin-bottom: 3rem;
@@ -123,7 +126,6 @@ html {
 }
 .container .navigation__link:hover {
   color: orange;
-  border-bottom: 0.1rem solid orange;
 }
 .container .content {
   background-color: orange;
@@ -489,5 +491,52 @@ background: linear-gradient(0deg, rgba(0,172,238,1) 0%, rgba(2,126,251,1) 100%);
   margin-left: 1.5rem;
   width: 10rem;
   font-size: 1.5rem;
+}
 
+.navigation_mobile{
+  display: none !important;
+  position: absolute;
+  background-color: #000;
+  display: block;
+  position: absolute;
+  width: 24rem;
+  left: 0;
+  height: 100%;
+  position: absolute;
+  z-index: 10;
+}
+
+.icon_menu__show{
+  display: none;
+  position: relative;
+  font-size: 2rem;
+  padding: 2rem 2rem;
+}
+
+.header-item--left{
+  display: flex;
+}
+
+.icon_menu__show:hover .navigation_mobile{
+  display: block;
+}
+
+.icon_menu__show:active .navigation_mobile{
+  display: block;
+}
+
+@media (max-width: 820px) {
+  .icon_menu__show{
+    display: block;
+  }
+
+  .navigation{
+    display: none;
+  }
+}
+
+@media (max-width: 767.98px) {
+  body {
+    font-size: 1.4rem;
+  }
 }

@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Thêm mới món ăn</title>
+  <title>Sửa ảnh</title>
 
   <link
       rel="stylesheet"
@@ -17,7 +17,7 @@
   <!-- header -->
   <header class="header">
     <div class="header-item">
-      <h3 class="header__title">Thêm mới món ăn mới</h3>
+      <h3 class="header__title">Sửa ảnh</h3>
       <h5 class="header__subtitle">chào mừng quay trở lại !</h5>
     </div>
     <div class="header-item header-item--right">
@@ -84,30 +84,7 @@
 
     <div class="content">
       <form action="" method="post" class="form__add">
-
-        <div class="form_add__name first_add_item">
-          <label class="form_text" for="name">Tên đồ ăn mới</label> <br>
-          <input class="form_add__input" type="text" name="name" placeholder="Aa">
-        </div>
-
-        <div class="form_add__name">
-          <label class="form_text" for="type">Loại</label> <br>
-          <input class="form_add__input" type="text" name="type" placeholder="Aa">
-        </div>
-
-        <div class="form_add__name">
-          <label class="form_text" for="category">Danh mục</label> <br>
-          <select name="category" id="cars" class="selected_item">
-            <option value="khaivi">Khai vị</option>
-            <option value="monchinh">Món chính</option>
-          </select>
-        </div>
-
-        <div class="form_add__name">
-          <label class="form_text" for="pass">Đơn giá</label> <br>
-          <input class="form_add__input" type="text" name="pass" placeholder="Aa">
-        </div>
-
+        
         <div class="form_add__name padding_y">
           <label class="form_text" for="img">Ảnh</label> <br>
           <!-- lấy dữ liệu ảnh của input này -->
@@ -118,9 +95,9 @@
           </div>
         </div>
 
-        <div class="form_add__name">
-          <br><label class="form_text" for="date">Trạng thái</label> <br>
-          <input class="form_add__input" type="text" name="date" placeholder="Aa">
+        <div class="form_add__name pb_3rem">
+          <label class="form_text" for="type">Trạng thái</label> <br>
+          <input class="form_add__input"  type="text" name="type" placeholder="Aa">
         </div>
 
         <div class="form_add__name pb_3rem">
@@ -129,7 +106,7 @@
         </div>
 
         <div class="form_add__name input_btn">
-          <button type="submit" name="btn-sub" class="custom-btn btn-12"><span>Xác nhận</span><span>Thêm</span></button>
+          <button type="submit" name="btn-sub" class="custom-btn btn-12"><span>Xác nhận</span><span>Sửa</span></button>
         </div>
       </form>
     </div>
