@@ -18,7 +18,7 @@
   <!-- header -->
   <header class="header">
     <div class="header-item header-item--left">
-      <i class="fas fa-bars icon_menu__show"></i>
+      <i class="fas fa-bars icon_menu__show" id="icon_menu__show"></i>
       <div>
         <h3 class="header__title">Bảng thống kê</h3>
         <h5 class="header__subtitle">chào mừng quay trở lại !</h5>
@@ -43,7 +43,6 @@
 
   <!-- body -->
   <div class="container">
-    
     <nav class="navigation_mobile">
       <ul class="navigation__list">
         <li class="navigation__item"><a href="admin-home-page.html" class="navigation__link">Bảng thống kê</a></li>
@@ -158,6 +157,12 @@
     </div>
   </div>
 
+  <script>
+    const mobile = document.getElementById('icon_menu__show')
+    mobile.onclick = function() {
+      
+    }
+  </script>
 </body>
 </html>
 
