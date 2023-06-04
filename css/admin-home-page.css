@@ -1,3 +1,6 @@
+:root {
+  --percent : 200px
+}
 
 .home-page{
   position: unset;
@@ -639,4 +642,135 @@ background: linear-gradient(0deg, rgba(0,172,238,1) 0%, rgba(2,126,251,1) 100%);
   width: 2.4rem;
   height: 2.4rem;
   margin-right: 1rem;
+}
+
+.main_home{
+  margin-top: 20rem;
+}
+
+.main_top{
+  font-size: 2rem;
+  line-height: 3.6rem;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 2rem;
+  border-bottom: 1px solid;
+  padding-bottom: 2rem;
+}
+
+.main_top__item-right{
+  margin-top: 1rem;
+}
+
+.wrapper{
+  background-color: #f5f5f5;
+}
+
+.body-title{
+  margin-top: 2rem;
+  font-size: 2.1rem;
+  font-weight: 600;
+}
+
+.statistical-list{
+  margin-top: 2rem;
+}
+
+.icon-statistical{
+  font-size: 6rem;
+  color: red;
+}
+
+.food-icon{
+  color: #02b7e9;
+}
+
+.ticket-icon{
+  color: #19dd25;
+}
+
+.heart-icon{
+  color: blueviolet;
+}
+
+.statistical-item{
+  border-radius: 3rem;
+  height: 20rem;
+  background: #e0d4e0;
+  text-align: center;
+  margin: 4rem 0;
+  padding: 2rem;
+}
+
+.number{
+  padding-top: 2rem;
+  font-size: 3rem;
+  font-weight: 600;
+  color: black;
+}
+
+.item-name{
+  font-size: 2rem;
+  font-weight: 600;
+  color: black;
+}
+
+.chart-title{
+  margin-top: 2rem;
+  font-size: 2.1rem;
+  font-weight: 600;
+}
+
+.chart{
+  display: flex;
+  justify-content: space-around;
+}
+
+.chart-layout{
+  margin: 4rem 0;
+  display: flex;
+  justify-content: space-between;
+  height: 40rem;
+  align-items: end;
+}
+
+.chart-layout--item{
+  height: var(--percent);
+  width: 3.3rem;
+  background-color: #19dd25;
+  text-align: center;
+  color: #fff;
+  margin-left: 0.8rem;
+}
+
+.morning{
+  border-right: 2px solid #333;
+  padding-right: 5.5rem;
+}
+
+.evening{
+  background-color: #0f0f10;
+  color: #fff;
+}
+
+@media (max-width: 991px){
+  .main_home{
+    margin-top: 6rem;
+  }
+  .chart{
+    display: block;
+  }
+  .chart-layout{
+    padding-right: 2rem;
+  }
+}
+
+@media (max-width: 575px){
+  .chart{
+    display: block;
+  }
+  .chart-layout .night{
+    padding-right: 2rem;
+  }
 }

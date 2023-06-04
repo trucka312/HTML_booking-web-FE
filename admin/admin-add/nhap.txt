@@ -1,0 +1,58 @@
+<div class="content">
+      <form action="" method="post" class="form__add">
+
+        <div class="form_add__name first_add_item">
+          <label class="form_text" for="name">Tên vourcher</label> <br>
+          <input class="form_add__input" type="text" name="name" placeholder="Aa">
+        </div>
+
+        <div class="form_add__name">
+          <label class="form_text" for="down">Giảm</label> <br>
+          <input class="form_add__input" type="text" name="down" placeholder="Aa">
+        </div>
+
+        <div class="form_add__name">
+          <label class="form_text" for="min">Tối thiểu</label> <br>
+          <input class="form_add__input" type="text" name="min" placeholder="Aa">
+        </div>
+
+        <div class="form_add__name">
+          <label class="form_text" for="remanining">Còn lại</label> <br>
+          <input class="form_add__input" type="text" name="remanining" placeholder="Aa">
+        </div>
+
+        <div class="form_add__name padding_y">
+          <label class="form_text" for="img">Ảnh</label> <br>
+          <!-- lấy dữ liệu ảnh của input này -->
+          <input class="form_add__input" type="text" name="image"> <br>
+          <!-- cái này chỉ để hiện ảnh lên thôi -->
+          <div class="img_input">
+            <input  type="file" name="img" placeholder="Aa" onchange="getImg(this)" class="file_input"> <br>
+          </div>
+        </div>
+
+        <div class="form_add__name">
+          <br><label class="form_text" for="code">Mã</label> <br>
+          <input class="form_add__input" type="text" name="code" placeholder="Aa">
+        </div>
+
+        <div class="form_add__name">
+          <br><label class="form_text" for="date">HSD</label> <br>
+          <input class="form_add__input" type="text" name="date" placeholder="Aa">
+        </div>
+
+        <div class="form_add__name">
+          <br><label class="form_text" for="status">Trạng thái</label> <br>
+          <input class="form_add__input" type="text" name="status" placeholder="Aa">
+        </div>
+
+        <div class="form_add__name pb_3rem">
+          <label class="form_text" for="note">ghi chú</label> <br>
+          <textarea class="text_area" name="note" cols="30" rows="10"></textarea>
+        </div>
+
+        <div class="form_add__name input_btn">
+          <button type="submit" name="btn-sub" class="custom-btn btn-12"><span>Xác nhận</span><span>Thêm</span></button>
+        </div>
+      </form>
+    </div>
